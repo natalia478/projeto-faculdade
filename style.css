@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background: #002f66;
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #eaeaea;
+}
+
+.section {
+    background: #fff;
+    margin: 50px 0;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2rem;
+    color: #002f66;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+ul li {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 10px 0;
+    transition: transform 0.3s ease;
+}
+
+ul li:hover {
+    transform: translateX(10px);
+}
+
+.section:nth-child(odd) {
+    animation: fadeInLeft 1s ease-out;
+}
+
+.section:nth-child(even) {
+    animation: fadeInRight 1s ease-out;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .section {
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    p, ul li {
+        font-size: 1rem;
+    }
+}
+
+#oximetro {
+    background-color: #f4f9fc;
+    padding: 50px 0;
+    color: #333;
+}
+
+#oximetro h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #002f66;
+}
+
+#oximetro p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.oximetro-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.feature {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #002f66;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    #oximetro h2 {
+        font-size: 2rem;
+    }
+
+    .feature h3 {
+        font-size: 1.2rem;
+    }
+
+    .feature p {
+        font-size: 1rem;
+    }
+}
+
+#equipe {
+    background: #f1f1f1;
+    padding: 50px 0;
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.team-member {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.team-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.header-flex {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-img {
+    width: 150px;
+    height: auto;
+}
+
+.menu-area h1 {
+    margin: 0;
+}
+
+.menu-area nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.menu-area nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex; /* Alinha os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens */
+    margin-top: 10px;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 10px; /* Espaçamento entre os itens do menu */
+}
+
+header nav ul li a {
+    display: inline-block; /* Faz com que cada link seja um bloco */
+    padding: 8px 20px; /* Ajusta o tamanho do botão */
+    font-size: 1rem; /* Ajusta o tamanho da fonte */
+    text-decoration: none;
+    color: #002f66; /* Cor do texto inicial (azul escuro) */
+    background-color: #fff; /* Cor de fundo inicial (branco) */
+    border: 2px solid #002f66; /* Borda azul escura */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: color 0.3s, border-color 0.3s, transform 0.3s; /* Animações suaves */
+}
+
+header nav ul li a:hover {
+    color: #fff; /* Texto branco ao passar o mouse */
+    background-color: #002f66; /* Fundo azul escuro */
+    border-color: #002f66; /* Borda azul escura */
+    transform: scale(1.05); /* Animação de aumento de tamanho */
+}
