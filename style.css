@@ -38,6 +38,8 @@ nav ul {
     display: flex;
     justify-content: center;
     margin-top: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 nav ul li {
@@ -136,12 +138,13 @@ footer {
     }
 
     nav ul {
-        flex-direction: column;
-        margin-top: 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     nav ul li {
-        margin: 10px 0;
+        margin: 10px;
     }
 
     .section {
@@ -297,57 +300,33 @@ footer {
 
 header nav ul {
     list-style: none;
-    display: flex; /* Alinha os itens horizontalmente */
-    justify-content: center; /* Centraliza os itens */
+    display: flex;
+    justify-content: center;
     margin-top: 10px;
     padding: 0;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 header nav ul li {
-    margin: 0 10px; /* Espaçamento entre os itens do menu */
+    margin: 0 10px;
 }
 
 header nav ul li a {
-    display: inline-block; /* Faz com que cada link seja um bloco */
-    padding: 8px 20px; /* Ajusta o tamanho do botão */
-    font-size: 1rem; /* Ajusta o tamanho da fonte */
+    display: inline-block;
+    padding: 8px 20px;
+    font-size: 1rem;
     text-decoration: none;
-    color: #002f66; /* Cor do texto inicial (azul escuro) */
-    background-color: #fff; /* Cor de fundo inicial (branco) */
-    border: 2px solid #002f66; /* Borda azul escura */
-    border-radius: 5px; /* Bordas arredondadas */
-    transition: color 0.3s, border-color 0.3s, transform 0.3s; /* Animações suaves */
+    color: #002f66;
+    background-color: #fff;
+    border: 2px solid #002f66;
+    border-radius: 5px;
+    transition: color 0.3s, border-color 0.3s, transform 0.3s;
 }
 
 header nav ul li a:hover {
-    color: #fff; /* Texto branco ao passar o mouse */
-    background-color: #002f66; /* Fundo azul escuro */
-    border-color: #002f66; /* Borda azul escura */
-    transform: scale(1.05); /* Animação de aumento de tamanho */
-}
-
-.menu-area nav ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap; /* Faz os botões quebrarem linha se necessário */
-  gap: 10px;
-  padding: 0;
-  margin: 0;
-  justify-content: center; /* Centraliza os botões */
-}
-
-.menu-area nav ul li a {
-  display: inline-block;
-  padding: 8px 12px;
-  background-color: #007BFF;
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.menu-area nav ul li a:hover {
-  background-color: #0056b3;
+    color: #fff;
+    background-color: #002f66;
+    border-color: #002f66;
+    transform: scale(1.05);
 }
